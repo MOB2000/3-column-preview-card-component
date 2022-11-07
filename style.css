@@ -1,0 +1,100 @@
+:root {
+  --radius: 12px;
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  --veryLightGray: hsl(0, 0%, 95%);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--veryLightGray);
+  text-align: left;
+}
+
+.card {
+  display: flex;
+  width: 700px;
+}
+
+div:first-child {
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+}
+
+div:last-child {
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.div-type {
+  width: 30%;
+  padding: 24px;
+}
+
+.type-name {
+  color: var(--veryLightGray);
+}
+
+.type-description {
+  color: var(--transparentWhite);
+
+  margin-top: 24px;
+  margin-bottom: 64px;
+}
+
+.sedan {
+  background-color: var(--brightOrange);
+  color: var(--brightOrange);
+}
+
+.suvs {
+  background-color: var(--darkCyan);
+  color: var(--darkCyan);
+}
+
+.luxury {
+  background-color: var(--veryDarkCyan);
+  color: var(--veryDarkCyan);
+}
+
+.div-learn-more {
+  border-radius: 48px;
+  background-color: var(--veryLightGray);
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.div-learn-more {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    padding: 24px;
+  }
+  .card {
+    display: block;
+  }
+
+  div:first-child {
+    border-top-right-radius: var(--radius);
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  div:last-child {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+  }
+}
